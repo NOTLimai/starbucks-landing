@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Starbucks Landing Page - Tailwind</title>
+
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        .circle {
+            clip-path: circle(600px at right 800px);
+        }
+    </style>
+</head>
+<body>
+    <section class="relative w-full min-h-screen p-[100px] flex justify-between items-center bg-white">
+        <div class="absolute top-0 left-0 w-full h-full bg-[#017143] circle"></div>
+        <header class="absolute top-0 left-0 w-full px-[100px] py-[20px] flex justify-between items-center">
+            <a href="#">
+                <img src="assets/logo.png" class="relative max-w-[80px]" alt="logo">
+            </a>
+            <ul class="relative flex">
+                <li><a href="" class="inline-block text-[#333] font-[400] ml-[40px]">Home</a></li>
+                <li><a href="" class="inline-block text-[#333] font-[400] ml-[40px]">Menu</a></li>
+                <li><a href="" class="inline-block text-[#333] font-[400] ml-[40px]">What's New</a></li>
+                <li><a href="" class="inline-block text-[#333] font-[400] ml-[40px]">Contact</a></li>
+            </ul>
+        </header>
+        <div class="relative w-full flex justify-between items-center">
+            <div class="relative max-w-[600px]">
+                <h2 class="text-[#333] text-[4em] leading-[1.4em] font-[500]">It's not just Coffe<br>It's <span class="text-[#017143] text-[1.2em] font-[900]">Starbucks</span></h2>
+                <p class="text-[#333]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus veritatis in, aspernatur soluta quae doloribus sapiente quasi perferendis quod. Minus rerum quaerat impedit sed nobis, repudiandae modi nulla enim expedita?</p>
+                <a href="#" class="inline-block mt-[20px] px-[20px] py-[8px] bg-[#017143] text-white rounded-[40px] font-[500] tracking-[1px]">Learn More</a>
+            </div>
+            <div class="w-[600px] flex justify-end pr-[50px] mt-[50px]">
+                <img src="assets/img1.png" alt="img1" class="starbucks max-w-[440px]">
+            </div>
+        </div>
+        <ul class="absolute left-[50%] bottom-[20px] translate-x-[-50%] flex">
+            <li class="inline-block mx-[20px] cursor-pointer duration-[0.5s] hover:translate-y-[-15px]"><img src="assets/thumb1.png" alt="thumb1" class="max-w-[60px]" onclick="imgSlider('assets/img1.png'); changeCircleColor('#017143')"></li>
+            <li class="inline-block mx-[20px] cursor-pointer duration-[0.5s] hover:translate-y-[-15px]"><img src="assets/thumb2.png" alt="thumb2" class="max-w-[60px]" onclick="imgSlider('assets/img2.png'); changeCircleColor('#eb7495')"></li>
+            <li class="inline-block mx-[20px] cursor-pointer duration-[0.5s] hover:translate-y-[-15px]"><img src="assets/thumb3.png" alt="thumb3" class="max-w-[60px]" onclick="imgSlider('assets/img3.png'); changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="absolute top-[50%] right-[30px] translate-y-[-50%] flex justify-center items-center flex-col">
+            <li><a href="#" class="inline-block my-[5px] scale-[0.6] invert"><img src="assets/facebook.png" alt="facebook"></a></li>
+            <li><a href="#" class="inline-block my-[5px] scale-[0.6] invert"><img src="assets/twitter.png" alt="twitter"></a></li>
+            <li><a href="#" class="inline-block my-[5px] scale-[0.6] invert"><img src="assets/instagram.png" alt="instagram"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+        function changeCircleColor(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+</body>
+</html>
